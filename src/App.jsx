@@ -79,7 +79,30 @@ const SAMPLE_DATA = {
     { date: "2026-06-13", home: "Argentina", away: "Tunisia", homeFlag: "🇦🇷", awayFlag: "🇹🇳", score: "2-1", group: "D" },
     { date: "2026-06-13", home: "Germany", away: "Canada", homeFlag: "🇩🇪", awayFlag: "🇨🇦", score: "3-2", group: "E" },
     { date: "2026-06-13", home: "Spain", away: "IR Iran", homeFlag: "🇪🇸", awayFlag: "🇮🇷", score: "1-0", group: "F" },
-  ]
+  ],
+  activityFeed: [
+    { timestamp: "2026-06-14T20:45:00Z", player: "Tim H",   playerFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team: "England",      teamFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", type: "goal",         detail: "England goal vs Saudi Arabia",          points: 1 },
+    { timestamp: "2026-06-14T20:30:00Z", player: "Tim H",   playerFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team: "England",      teamFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", type: "goal",         detail: "England goal vs Saudi Arabia",          points: 1 },
+    { timestamp: "2026-06-14T20:10:00Z", player: "Tim H",   playerFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team: "England",      teamFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", type: "captainGoal",  detail: "Harry Kane captain goal vs Saudi Arabia", points: 2 },
+    { timestamp: "2026-06-14T20:05:00Z", player: "Tim H",   playerFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team: "Saudi Arabia", teamFlag: "🇸🇦", type: "goal",         detail: "Saudi Arabia conceded vs England",      points: 1 },
+    { timestamp: "2026-06-14T19:55:00Z", player: "Sarah K", playerFlag: "🇫🇷", team: "France",       teamFlag: "🇫🇷", type: "captainGoal",  detail: "Mbappé captain goal vs Costa Rica",     points: 2 },
+    { timestamp: "2026-06-14T19:40:00Z", player: "Sarah K", playerFlag: "🇫🇷", team: "France",       teamFlag: "🇫🇷", type: "goal",         detail: "France goal vs Costa Rica",             points: 1 },
+    { timestamp: "2026-06-14T19:30:00Z", player: "Sarah K", playerFlag: "🇫🇷", team: "Costa Rica",   teamFlag: "🇨🇷", type: "goal",         detail: "Costa Rica conceded vs France",         points: 1 },
+    { timestamp: "2026-06-14T18:50:00Z", player: "Dave M",  playerFlag: "🇧🇷", team: "Brazil",       teamFlag: "🇧🇷", type: "captainGoal",  detail: "Vinícius Jr captain goal vs New Zealand", points: 2 },
+    { timestamp: "2026-06-14T18:35:00Z", player: "Dave M",  playerFlag: "🇧🇷", team: "Brazil",       teamFlag: "🇧🇷", type: "goal",         detail: "Brazil goal vs New Zealand",            points: 1 },
+    { timestamp: "2026-06-14T18:20:00Z", player: "Dave M",  playerFlag: "🇧🇷", team: "Brazil",       teamFlag: "🇧🇷", type: "goal",         detail: "Brazil goal vs New Zealand",            points: 1 },
+    { timestamp: "2026-06-14T18:10:00Z", player: "Dave M",  playerFlag: "🇧🇷", team: "New Zealand",  teamFlag: "🇳🇿", type: "ownGoal",      detail: "New Zealand own goal vs Brazil",        points: -1 },
+    { timestamp: "2026-06-13T21:00:00Z", player: "Laura P", playerFlag: "🇦🇷", team: "Argentina",    teamFlag: "🇦🇷", type: "captainGoal",  detail: "Messi captain goal vs Tunisia",         points: 2 },
+    { timestamp: "2026-06-13T20:45:00Z", player: "Laura P", playerFlag: "🇦🇷", team: "Argentina",    teamFlag: "🇦🇷", type: "goal",         detail: "Argentina goal vs Tunisia",             points: 1 },
+    { timestamp: "2026-06-13T20:30:00Z", player: "Laura P", playerFlag: "🇦🇷", team: "Tunisia",      teamFlag: "🇹🇳", type: "goal",         detail: "Tunisia conceded vs Argentina",         points: 1 },
+    { timestamp: "2026-06-13T19:55:00Z", player: "Chris W", playerFlag: "🇩🇪", team: "Germany",      teamFlag: "🇩🇪", type: "captainGoal",  detail: "Wirtz captain goal vs Canada",          points: 2 },
+    { timestamp: "2026-06-13T19:40:00Z", player: "Chris W", playerFlag: "🇩🇪", team: "Germany",      teamFlag: "🇩🇪", type: "goal",         detail: "Germany goal vs Canada",                points: 1 },
+    { timestamp: "2026-06-13T19:25:00Z", player: "Chris W", playerFlag: "🇩🇪", team: "Canada",       teamFlag: "🇨🇦", type: "goal",         detail: "Canada conceded vs Germany",            points: 1 },
+    { timestamp: "2026-06-13T18:50:00Z", player: "Priya R", playerFlag: "🇪🇸", team: "Spain",        teamFlag: "🇪🇸", type: "captainGoal",  detail: "Yamal captain goal vs IR Iran",         points: 2 },
+    { timestamp: "2026-06-13T18:30:00Z", player: "Priya R", playerFlag: "🇪🇸", team: "IR Iran",      teamFlag: "🇮🇷", type: "goal",         detail: "IR Iran conceded vs Spain",             points: 1 },
+    { timestamp: "2026-06-13T18:10:00Z", player: "Tim H",   playerFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team: "England",      teamFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", type: "yellow",       detail: "England yellow card vs Saudi Arabia",   points: -1 },
+    { timestamp: "2026-06-13T17:55:00Z", player: "Laura P", playerFlag: "🇦🇷", team: "Argentina",    teamFlag: "🇦🇷", type: "yellow",       detail: "Argentina yellow card vs Tunisia",      points: -1 },
+  ],
 };
 
 const TIER_COLORS = {
@@ -274,6 +297,72 @@ function MatchCard({ match }) {
   );
 }
 
+const EVENT_CONFIG = {
+  goal:        { icon: "⚽", label: "Goal",         color: "#22c55e" },
+  captainGoal: { icon: "⭐", label: "Captain Goal", color: "#f59e0b" },
+  ownGoal:     { icon: "🔴", label: "Own Goal",     color: "#ef4444" },
+  yellow:      { icon: "🟨", label: "Yellow Card",  color: "#eab308" },
+  red:         { icon: "🟥", label: "Red Card",     color: "#ef4444" },
+};
+
+function ActivityFeed({ events }) {
+  let lastDate = null;
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+      {events.map((event, i) => {
+        const date = new Date(event.timestamp).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+        const time = new Date(event.timestamp).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+        const cfg = EVENT_CONFIG[event.type] || { icon: "•", label: event.type, color: "#94a3b8" };
+        const isPositive = event.points > 0;
+        const showDate = date !== lastDate;
+        lastDate = date;
+        return (
+          <div key={i}>
+            {showDate && (
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, color: "var(--text-muted)", padding: "16px 4px 8px", textTransform: "uppercase" }}>
+                {date}
+              </div>
+            )}
+            <div style={{
+              background: "var(--card-bg)",
+              borderRadius: 10,
+              padding: "12px 14px",
+              border: "1px solid var(--border-subtle)",
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+            }}>
+              <span style={{ fontSize: 20, flexShrink: 0 }}>{cfg.icon}</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: "var(--text-primary)" }}>{event.player}</span>
+                  <span style={{ fontSize: 12, color: "var(--text-muted)" }}>·</span>
+                  <span style={{ fontSize: 12, color: "var(--text-muted)" }}>{event.teamFlag} {event.team}</span>
+                </div>
+                <div style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 2 }}>{event.detail}</div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 2, flexShrink: 0 }}>
+                <span style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontWeight: 800,
+                  fontSize: 15,
+                  color: isPositive ? "#22c55e" : "#ef4444",
+                  background: isPositive ? "#22c55e15" : "#ef444415",
+                  padding: "2px 8px",
+                  borderRadius: 6,
+                }}>
+                  {event.points > 0 ? "+" : ""}{event.points}
+                </span>
+                <span style={{ fontSize: 10, color: "var(--text-muted)" }}>{time}</span>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function StatsBar({ data }) {
   const topScorer = data.players.reduce((top, p) => p.totalPoints > top.totalPoints ? p : top, data.players[0]);
 
@@ -383,7 +472,7 @@ export default function App() {
         marginBottom: 16,
         borderBottom: "1px solid var(--border-subtle)",
       }}>
-        {["leaderboard", "matches"].map((tab) => (
+        {["leaderboard", "matches", "activity"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -401,7 +490,7 @@ export default function App() {
               transition: "all 0.15s",
             }}
           >
-            {tab === "leaderboard" ? "🏆 Leaderboard" : "⚽ Recent Matches"}
+            {tab === "leaderboard" ? "🏆 Leaderboard" : tab === "matches" ? "⚽ Matches" : "📋 Activity"}
           </button>
         ))}
       </div>
@@ -428,6 +517,10 @@ export default function App() {
               <MatchCard key={i} match={match} />
             ))}
           </div>
+        )}
+
+        {activeTab === "activity" && (
+          <ActivityFeed events={data.activityFeed} />
         )}
       </div>
     </div>
