@@ -8,67 +8,91 @@ const SAMPLE_DATA = {
   phase: "Group Stage",
   players: [
     {
-      id: 1, name: "Tim H", totalPoints: 18,
+      id: 1, name: "Tim H", pin: "1234", totalPoints: 18,
       teams: [
-        { name: "England", tier: 1, flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", mechanism: "scored", captain: "Harry Kane", points: 8, goals: 5, captainGoals: 1, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Mexico", tier: 2, flag: "🇲🇽", mechanism: "conceded", captain: "Raúl Jiménez", points: 4, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0 },
-        { name: "Saudi Arabia", tier: 3, flag: "🇸🇦", mechanism: "conceded", captain: "Salem Al-Dawsari", points: 6, goals: 7, captainGoals: 0, ownGoals: 1, yellows: 1, reds: 0 },
+        { name: "England", tier: 1, flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", mechanism: "scored", captain: "Harry Kane", points: 8, goals: 5, captainGoals: 1, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Harry Kane", "Jude Bellingham", "Bukayo Saka", "Phil Foden", "Marcus Rashford", "Declan Rice", "Trent Alexander-Arnold", "John Stones", "Jordan Pickford", "Jack Grealish", "Cole Palmer"] },
+        { name: "Mexico", tier: 2, flag: "🇲🇽", mechanism: "conceded", captain: "Raúl Jiménez", points: 4, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Raúl Jiménez", "Hirving Lozano", "Edson Álvarez", "Guillermo Ochoa", "Henry Martín", "Alexis Vega", "Jorge Sánchez", "César Montes", "Héctor Herrera", "Roberto Alvarado"] },
+        { name: "Saudi Arabia", tier: 3, flag: "🇸🇦", mechanism: "conceded", captain: "Salem Al-Dawsari", points: 6, goals: 7, captainGoals: 0, ownGoals: 1, yellows: 1, reds: 0,
+          squad: ["Salem Al-Dawsari", "Mohammed Al-Owais", "Firas Al-Buraikan", "Saleh Al-Shehri", "Yasser Al-Shahrani", "Ali Al-Bulayhi", "Sami Al-Najei", "Abdullah Otayf", "Hassan Tambakti", "Mohammed Al-Qasem"] },
       ]
     },
     {
-      id: 2, name: "Sarah K", totalPoints: 15,
+      id: 2, name: "Sarah K", pin: "2345", totalPoints: 15,
       teams: [
-        { name: "France", tier: 1, flag: "🇫🇷", mechanism: "scored", captain: "Kylian Mbappé", points: 10, goals: 6, captainGoals: 2, ownGoals: 0, yellows: 0, reds: 0 },
-        { name: "USA", tier: 2, flag: "🇺🇸", mechanism: "scored", captain: "Christian Pulisic", points: 3, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Costa Rica", tier: 3, flag: "🇨🇷", mechanism: "conceded", captain: "Keylor Navas", points: 2, goals: 5, captainGoals: 0, ownGoals: 0, yellows: 3, reds: 0 },
+        { name: "France", tier: 1, flag: "🇫🇷", mechanism: "scored", captain: "Kylian Mbappé", points: 10, goals: 6, captainGoals: 2, ownGoals: 0, yellows: 0, reds: 0,
+          squad: ["Kylian Mbappé", "Antoine Griezmann", "Ousmane Dembélé", "Marcus Thuram", "Aurélien Tchouaméni", "Eduardo Camavinga", "Theo Hernandez", "Jules Koundé", "Dayot Upamecano", "Mike Maignan"] },
+        { name: "USA", tier: 2, flag: "🇺🇸", mechanism: "scored", captain: "Christian Pulisic", points: 3, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Christian Pulisic", "Tyler Adams", "Weston McKennie", "Gio Reyna", "Josh Sargent", "Tim Weah", "Sergiño Dest", "Brendan Aaronson", "Matt Turner", "Ricardo Pepi"] },
+        { name: "Costa Rica", tier: 3, flag: "🇨🇷", mechanism: "conceded", captain: "Keylor Navas", points: 2, goals: 5, captainGoals: 0, ownGoals: 0, yellows: 3, reds: 0,
+          squad: ["Keylor Navas", "Bryan Ruiz", "Joel Campbell", "Celso Borges", "Bryan Oviedo", "Francisco Calvo", "Yeltsin Tejeda", "Randall Leal", "Anthony Contreras", "Jewison Bennette"] },
       ]
     },
     {
-      id: 3, name: "Dave M", totalPoints: 14,
+      id: 3, name: "Dave M", pin: "3456", totalPoints: 14,
       teams: [
-        { name: "Brazil", tier: 1, flag: "🇧🇷", mechanism: "scored", captain: "Vinícius Jr", points: 9, goals: 5, captainGoals: 2, ownGoals: 0, yellows: 3, reds: 0 },
-        { name: "South Korea", tier: 2, flag: "🇰🇷", mechanism: "scored", captain: "Son Heung-min", points: 4, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0 },
-        { name: "New Zealand", tier: 3, flag: "🇳🇿", mechanism: "conceded", captain: "Chris Wood", points: 1, goals: 6, captainGoals: 0, ownGoals: 1, yellows: 2, reds: 0 },
+        { name: "Brazil", tier: 1, flag: "🇧🇷", mechanism: "scored", captain: "Vinícius Jr", points: 9, goals: 5, captainGoals: 2, ownGoals: 0, yellows: 3, reds: 0,
+          squad: ["Vinícius Jr", "Rodrygo", "Raphinha", "Gabriel Jesus", "Casemiro", "Bruno Guimarães", "Marquinhos", "Éder Militão", "Alisson", "Lucas Paquetá", "Fred"] },
+        { name: "South Korea", tier: 2, flag: "🇰🇷", mechanism: "scored", captain: "Son Heung-min", points: 4, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Son Heung-min", "Lee Kang-in", "Kim Min-jae", "Hwang Hee-chan", "Cho Gue-sung", "Kim Seung-gyu", "Jung Woo-young", "Kim Jin-su", "Kwon Chang-hoon", "Lee Jae-sung"] },
+        { name: "New Zealand", tier: 3, flag: "🇳🇿", mechanism: "conceded", captain: "Chris Wood", points: 1, goals: 6, captainGoals: 0, ownGoals: 1, yellows: 2, reds: 0,
+          squad: ["Chris Wood", "Clayton Lewis", "Winston Reid", "Liberato Cacace", "Bill Tuilagi", "Matthew Garbett", "Alex Greive", "Michael Boxall", "Joe Bell", "Elijah Just"] },
       ]
     },
     {
-      id: 4, name: "Laura P", totalPoints: 12,
+      id: 4, name: "Laura P", pin: "4567", totalPoints: 12,
       teams: [
-        { name: "Argentina", tier: 1, flag: "🇦🇷", mechanism: "scored", captain: "Lionel Messi", points: 7, goals: 4, captainGoals: 1, ownGoals: 0, yellows: 2, reds: 0 },
-        { name: "Japan", tier: 2, flag: "🇯🇵", mechanism: "conceded", captain: "Takumi Minamino", points: 3, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Tunisia", tier: 3, flag: "🇹🇳", mechanism: "conceded", captain: "Youssef Msakni", points: 2, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0 },
+        { name: "Argentina", tier: 1, flag: "🇦🇷", mechanism: "scored", captain: "Lionel Messi", points: 7, goals: 4, captainGoals: 1, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Lionel Messi", "Julián Álvarez", "Lautaro Martínez", "Enzo Fernández", "Rodrigo De Paul", "Alexis Mac Allister", "Emiliano Martínez", "Nicolás Otamendi", "Nahuel Molina", "Lisandro Martínez"] },
+        { name: "Japan", tier: 2, flag: "🇯🇵", mechanism: "conceded", captain: "Takumi Minamino", points: 3, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Takumi Minamino", "Kaoru Mitoma", "Daichi Kamada", "Wataru Endo", "Junya Ito", "Ao Tanaka", "Daizen Maeda", "Maya Yoshida", "Hiroki Sakai", "Shuichi Gonda"] },
+        { name: "Tunisia", tier: 3, flag: "🇹🇳", mechanism: "conceded", captain: "Youssef Msakni", points: 2, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Youssef Msakni", "Wahbi Khazri", "Ellyes Skhiri", "Montassar Talbi", "Ali Maaloul", "Hannibal Mejbri", "Aymen Dahmen", "Nader Ghandri", "Seifeddine Jaziri", "Ghailene Chaalali"] },
       ]
     },
     {
-      id: 5, name: "Chris W", totalPoints: 11,
+      id: 5, name: "Chris W", pin: "5678", totalPoints: 11,
       teams: [
-        { name: "Germany", tier: 1, flag: "🇩🇪", mechanism: "scored", captain: "Florian Wirtz", points: 6, goals: 4, captainGoals: 1, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Ecuador", tier: 2, flag: "🇪🇨", mechanism: "scored", captain: "Moisés Caicedo", points: 2, goals: 2, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Canada", tier: 3, flag: "🇨🇦", mechanism: "conceded", captain: "Alphonso Davies", points: 3, goals: 5, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0 },
+        { name: "Germany", tier: 1, flag: "🇩🇪", mechanism: "scored", captain: "Florian Wirtz", points: 6, goals: 4, captainGoals: 1, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Florian Wirtz", "Jamal Musiala", "Leroy Sané", "Kai Havertz", "Thomas Müller", "İlkay Gündoğan", "Joshua Kimmich", "Antonio Rüdiger", "Manuel Neuer", "Serge Gnabry", "Niclas Füllkrug"] },
+        { name: "Ecuador", tier: 2, flag: "🇪🇨", mechanism: "scored", captain: "Moisés Caicedo", points: 2, goals: 2, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Moisés Caicedo", "Enner Valencia", "Piero Hincapié", "Pervis Estupiñán", "Jeremy Sarmiento", "Gonzalo Plata", "Ángelo Preciado", "José Cifuentes", "Carlos Gruezo", "Djorkaeff Reasco"] },
+        { name: "Canada", tier: 3, flag: "🇨🇦", mechanism: "conceded", captain: "Alphonso Davies", points: 3, goals: 5, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Alphonso Davies", "Jonathan David", "Tajon Buchanan", "Stephen Eustáquio", "Cyle Larin", "Milan Borjan", "Richie Laryea", "Junior Hoilett", "Atiba Hutchinson", "Kamal Miller"] },
       ]
     },
     {
-      id: 6, name: "Priya R", totalPoints: 10,
+      id: 6, name: "Priya R", pin: "6789", totalPoints: 10,
       teams: [
-        { name: "Spain", tier: 1, flag: "🇪🇸", mechanism: "scored", captain: "Lamine Yamal", points: 5, goals: 3, captainGoals: 1, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Serbia", tier: 2, flag: "🇷🇸", mechanism: "conceded", captain: "Dušan Vlahović", points: 4, goals: 5, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "IR Iran", tier: 3, flag: "🇮🇷", mechanism: "conceded", captain: "Mehdi Taremi", points: 1, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 3, reds: 0 },
+        { name: "Spain", tier: 1, flag: "🇪🇸", mechanism: "scored", captain: "Lamine Yamal", points: 5, goals: 3, captainGoals: 1, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Lamine Yamal", "Pedri", "Gavi", "Rodri", "Álvaro Morata", "Ferran Torres", "Ansu Fati", "Unai Simón", "Dani Carvajal", "Aymeric Laporte", "Marcos Llorente"] },
+        { name: "Serbia", tier: 2, flag: "🇷🇸", mechanism: "conceded", captain: "Dušan Vlahović", points: 4, goals: 5, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Dušan Vlahović", "Aleksandar Mitrović", "Sergej Milinković-Savić", "Filip Kostić", "Luka Jović", "Nemanja Gudelj", "Strahinja Pavlović", "Vanja Milinković-Savić", "Andrija Živković", "Saša Lukić"] },
+        { name: "IR Iran", tier: 3, flag: "🇮🇷", mechanism: "conceded", captain: "Mehdi Taremi", points: 1, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 3, reds: 0,
+          squad: ["Mehdi Taremi", "Sardar Azmoun", "Ali Gholizadeh", "Alireza Jahanbakhsh", "Alireza Beiranvand", "Saeid Ezatolahi", "Morteza Pouraliganji", "Majid Hosseini", "Shoja Khalilzadeh", "Ahmad Noorollahi"] },
       ]
     },
     {
-      id: 7, name: "James B", totalPoints: 8,
+      id: 7, name: "James B", pin: "7890", totalPoints: 8,
       teams: [
-        { name: "Portugal", tier: 1, flag: "🇵🇹", mechanism: "scored", captain: "Cristiano Ronaldo", points: 4, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0 },
-        { name: "Cameroon", tier: 2, flag: "🇨🇲", mechanism: "conceded", captain: "André-Frank Zambo Anguissa", points: 3, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Qatar", tier: 3, flag: "🇶🇦", mechanism: "conceded", captain: "Akram Afif", points: 1, goals: 6, captainGoals: 0, ownGoals: 1, yellows: 2, reds: 0 },
+        { name: "Portugal", tier: 1, flag: "🇵🇹", mechanism: "scored", captain: "Cristiano Ronaldo", points: 4, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Cristiano Ronaldo", "Bruno Fernandes", "Bernardo Silva", "João Félix", "Diogo Jota", "Rafael Leão", "Vitinha", "William Carvalho", "Rúben Dias", "Nuno Mendes", "Diogo Costa"] },
+        { name: "Cameroon", tier: 2, flag: "🇨🇲", mechanism: "conceded", captain: "André-Frank Zambo Anguissa", points: 3, goals: 4, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["André-Frank Zambo Anguissa", "Karl Toko Ekambi", "Vincent Aboubakar", "Eric Maxim Choupo-Moting", "Bryan Mbeumo", "Nicolas Nkoulou", "Collins Fai", "Samuel Gouet", "Nouhou Tolo", "André Onana"] },
+        { name: "Qatar", tier: 3, flag: "🇶🇦", mechanism: "conceded", captain: "Akram Afif", points: 1, goals: 6, captainGoals: 0, ownGoals: 1, yellows: 2, reds: 0,
+          squad: ["Akram Afif", "Hassan Al-Haydos", "Almoez Ali", "Karim Boudiaf", "Pedro Miguel", "Meshaal Barsham", "Bassam Al-Rawi", "Boualem Khoukhi", "Ismaeel Mohammad", "Salem Al-Hajri"] },
       ]
     },
     {
-      id: 8, name: "Meg T", totalPoints: 6,
+      id: 8, name: "Meg T", pin: "8901", totalPoints: 6,
       teams: [
-        { name: "Netherlands", tier: 1, flag: "🇳🇱", mechanism: "scored", captain: "Cody Gakpo", points: 3, goals: 2, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0 },
-        { name: "Ghana", tier: 2, flag: "🇬🇭", mechanism: "scored", captain: "Mohammed Kudus", points: 2, goals: 2, captainGoals: 0, ownGoals: 0, yellows: 0, reds: 0 },
-        { name: "Honduras", tier: 3, flag: "🇭🇳", mechanism: "conceded", captain: "Alberth Elis", points: 1, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0 },
+        { name: "Netherlands", tier: 1, flag: "🇳🇱", mechanism: "scored", captain: "Cody Gakpo", points: 3, goals: 2, captainGoals: 0, ownGoals: 0, yellows: 1, reds: 0,
+          squad: ["Cody Gakpo", "Virgil van Dijk", "Memphis Depay", "Frenkie de Jong", "Xavi Simons", "Matthijs de Ligt", "Nathan Aké", "Denzel Dumfries", "Steven Bergwijn", "Jasper Cillessen"] },
+        { name: "Ghana", tier: 2, flag: "🇬🇭", mechanism: "scored", captain: "Mohammed Kudus", points: 2, goals: 2, captainGoals: 0, ownGoals: 0, yellows: 0, reds: 0,
+          squad: ["Mohammed Kudus", "Thomas Partey", "André Ayew", "Jordan Ayew", "Inaki Williams", "Kamaldeen Sulemana", "Daniel Amartey", "Joseph Aidoo", "Abdul Fatawu Issahaku", "Daniel Kofi Kyereh"] },
+        { name: "Honduras", tier: 3, flag: "🇭🇳", mechanism: "conceded", captain: "Alberth Elis", points: 1, goals: 3, captainGoals: 0, ownGoals: 0, yellows: 2, reds: 0,
+          squad: ["Alberth Elis", "Romell Quioto", "Eddie Hernández", "Maynor Figueroa", "Jonathan Rubio", "Bryan Moya", "Luis López", "Denil Maldonado", "Boniek García", "Héctor Castellanos"] },
       ]
     },
   ],
@@ -363,6 +387,195 @@ function ActivityFeed({ events }) {
   );
 }
 
+function PinGate({ players, onAuth }) {
+  const [pin, setPin] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const match = players.find(p => p.pin === pin);
+    if (match) {
+      sessionStorage.setItem("sweepstake_pid", match.id);
+      onAuth(match.id);
+    } else {
+      setError(true);
+      setPin("");
+    }
+  };
+
+  return (
+    <div style={{ display: "flex", justifyContent: "center", paddingTop: 40 }}>
+      <div style={{
+        background: "var(--card-bg)",
+        borderRadius: 16,
+        padding: "32px 28px",
+        border: "1px solid var(--border-subtle)",
+        width: "100%",
+        maxWidth: 320,
+        textAlign: "center",
+      }}>
+        <div style={{ fontSize: 36, marginBottom: 12 }}>🔐</div>
+        <div style={{ fontWeight: 800, fontSize: 18, color: "var(--text-primary)", marginBottom: 6 }}>My Picks</div>
+        <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>Enter your PIN to set your captain and Tier 2 choice</div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="password"
+            inputMode="numeric"
+            maxLength={4}
+            value={pin}
+            onChange={e => { setPin(e.target.value.replace(/\D/g, "")); setError(false); }}
+            placeholder="• • • •"
+            style={{
+              width: "100%",
+              boxSizing: "border-box",
+              background: "var(--card-inner-bg)",
+              border: error ? "2px solid #ef4444" : "1px solid var(--border-subtle)",
+              borderRadius: 10,
+              padding: "12px 16px",
+              fontSize: 22,
+              letterSpacing: 8,
+              color: "var(--text-primary)",
+              textAlign: "center",
+              fontFamily: "'JetBrains Mono', monospace",
+              marginBottom: 8,
+              outline: "none",
+            }}
+            autoFocus
+          />
+          {error && (
+            <div style={{ fontSize: 12, color: "#ef4444", marginBottom: 12 }}>Incorrect PIN — try again</div>
+          )}
+          <button
+            type="submit"
+            disabled={pin.length !== 4}
+            style={{
+              width: "100%",
+              background: pin.length === 4 ? "var(--accent)" : "var(--border-subtle)",
+              color: pin.length === 4 ? "#1a1a2e" : "var(--text-muted)",
+              border: "none",
+              borderRadius: 10,
+              padding: "12px",
+              fontSize: 14,
+              fontWeight: 800,
+              cursor: pin.length === 4 ? "pointer" : "not-allowed",
+              marginTop: 4,
+              transition: "all 0.15s",
+            }}
+          >
+            Unlock
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+function MyPicksPanel({ player, onCaptainChange, onMechanismChange, onSignOut }) {
+  const tier = TIER_COLORS;
+  const selectStyle = {
+    width: "100%",
+    background: "var(--card-inner-bg)",
+    color: "var(--text-primary)",
+    border: "1px solid var(--border-subtle)",
+    borderRadius: 6,
+    padding: "6px 10px",
+    fontSize: 13,
+    fontFamily: "inherit",
+    cursor: "pointer",
+    marginTop: 6,
+    outline: "none",
+  };
+
+  return (
+    <div>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+        <div style={{ fontWeight: 800, fontSize: 18, color: "var(--text-primary)" }}>
+          👋 Hey, {player.name}
+        </div>
+        <button
+          onClick={onSignOut}
+          style={{ background: "none", border: "none", fontSize: 12, color: "var(--text-muted)", cursor: "pointer", textDecoration: "underline" }}
+        >
+          Not you? Sign out
+        </button>
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        {player.teams.map(team => (
+          <div key={team.name} style={{
+            background: "var(--card-bg)",
+            borderRadius: 14,
+            border: "1px solid var(--border-subtle)",
+            overflow: "hidden",
+          }}>
+            {/* Team header */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 16px 10px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ fontSize: 22 }}>{team.flag}</span>
+                <span style={{ fontWeight: 700, fontSize: 15, color: "var(--text-primary)" }}>{team.name}</span>
+              </div>
+              <span style={{
+                fontSize: 9, fontWeight: 800, letterSpacing: 1,
+                background: tier[team.tier].bg, color: tier[team.tier].text,
+                padding: "2px 8px", borderRadius: 4,
+              }}>{tier[team.tier].label}</span>
+            </div>
+
+            <div style={{ padding: "0 16px 14px", display: "flex", flexDirection: "column", gap: 12 }}>
+              {/* Mechanism row */}
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: "var(--text-muted)", marginBottom: 6 }}>⚡ Points mechanism</div>
+                {team.tier === 2 ? (
+                  <div style={{ display: "flex", border: "1px solid var(--border-subtle)", borderRadius: 8, overflow: "hidden" }}>
+                    {["scored", "conceded"].map(opt => (
+                      <button
+                        key={opt}
+                        onClick={() => onMechanismChange(player.id, team.name, opt)}
+                        style={{
+                          flex: 1,
+                          padding: "8px 6px",
+                          border: "none",
+                          fontSize: 11,
+                          fontWeight: 700,
+                          cursor: "pointer",
+                          transition: "all 0.15s",
+                          background: team.mechanism === opt ? "var(--accent)" : "var(--card-inner-bg)",
+                          color: team.mechanism === opt ? "#1a1a2e" : "var(--text-muted)",
+                        }}
+                      >
+                        {opt === "scored" ? "⚽ Goals Scored" : "🥅 Goals Conceded"}
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div style={{ fontSize: 12, color: "var(--text-muted)", background: "var(--card-inner-bg)", borderRadius: 6, padding: "7px 10px" }}>
+                    {team.tier === 1 ? "⚽ Goals Scored (fixed)" : "🥅 Goals Conceded (fixed)"}
+                  </div>
+                )}
+              </div>
+
+              {/* Captain row */}
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: "var(--text-muted)" }}>©️ Captain</div>
+                <select
+                  value={team.captain}
+                  onChange={e => onCaptainChange(player.id, team.name, e.target.value)}
+                  style={selectStyle}
+                >
+                  <option value="">— Select captain —</option>
+                  {team.squad.map(name => (
+                    <option key={name} value={name}>{name}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function StatsBar({ data }) {
   const topScorer = data.players.reduce((top, p) => p.totalPoints > top.totalPoints ? p : top, data.players[0]);
 
@@ -398,9 +611,47 @@ function StatsBar({ data }) {
 }
 
 export default function App() {
-  const [data] = useState(SAMPLE_DATA);
+  const [data, setData] = useState(() => {
+    try {
+      const stored = localStorage.getItem("sweepstake_picks");
+      return stored ? { ...SAMPLE_DATA, players: JSON.parse(stored) } : SAMPLE_DATA;
+    } catch { return SAMPLE_DATA; }
+  });
+  const [currentPlayerId, setCurrentPlayerId] = useState(() => {
+    const pid = sessionStorage.getItem("sweepstake_pid");
+    return pid ? Number(pid) : null;
+  });
   const [expandedPlayer, setExpandedPlayer] = useState(null);
   const [activeTab, setActiveTab] = useState("leaderboard");
+
+  const updateCaptain = (playerId, teamName, captain) => {
+    setData(prev => {
+      const next = { ...prev, players: prev.players.map(p =>
+        p.id !== playerId ? p : { ...p, teams: p.teams.map(t =>
+          t.name !== teamName ? t : { ...t, captain }
+        )}
+      )};
+      localStorage.setItem("sweepstake_picks", JSON.stringify(next.players));
+      return next;
+    });
+  };
+
+  const updateMechanism = (playerId, teamName, mechanism) => {
+    setData(prev => {
+      const next = { ...prev, players: prev.players.map(p =>
+        p.id !== playerId ? p : { ...p, teams: p.teams.map(t =>
+          t.name !== teamName ? t : { ...t, mechanism }
+        )}
+      )};
+      localStorage.setItem("sweepstake_picks", JSON.stringify(next.players));
+      return next;
+    });
+  };
+
+  const handleSignOut = () => {
+    sessionStorage.removeItem("sweepstake_pid");
+    setCurrentPlayerId(null);
+  };
 
   const sortedPlayers = [...data.players].sort((a, b) => b.totalPoints - a.totalPoints);
 
@@ -472,7 +723,7 @@ export default function App() {
         marginBottom: 16,
         borderBottom: "1px solid var(--border-subtle)",
       }}>
-        {["leaderboard", "matches", "activity"].map((tab) => (
+        {["leaderboard", "matches", "activity", "picks"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -490,7 +741,7 @@ export default function App() {
               transition: "all 0.15s",
             }}
           >
-            {tab === "leaderboard" ? "🏆 Leaderboard" : tab === "matches" ? "⚽ Matches" : "📋 Activity"}
+            {tab === "leaderboard" ? "🏆 Leaderboard" : tab === "matches" ? "⚽ Matches" : tab === "activity" ? "📋 Activity" : "🎯 My Picks"}
           </button>
         ))}
       </div>
@@ -521,6 +772,17 @@ export default function App() {
 
         {activeTab === "activity" && (
           <ActivityFeed events={data.activityFeed} />
+        )}
+
+        {activeTab === "picks" && (
+          currentPlayerId === null
+            ? <PinGate players={data.players} onAuth={setCurrentPlayerId} />
+            : <MyPicksPanel
+                player={data.players.find(p => p.id === currentPlayerId)}
+                onCaptainChange={updateCaptain}
+                onMechanismChange={updateMechanism}
+                onSignOut={handleSignOut}
+              />
         )}
       </div>
     </div>
